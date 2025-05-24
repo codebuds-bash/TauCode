@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* UserManual.css */
+
+/* Container */
+.container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #FFFFFF; /* Tailwind bg-gray-50 */
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  color: #374151; /* Tailwind text-gray-700 */
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  background-color: white; /* bg-white */
+  border-radius: 16px; /* rounded-xl */
+   /* shadow-lg with blue tint */
+  padding: 2.5rem 3rem; /* p-10 sm:p-12 */
+  line-height: 1.7;
+  user-select: text;
+}
+
+/* Header */
+.header {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #e0e7ff; /* Tailwind border-indigo-200 */
+  padding-bottom: 1rem;
+}
+
+/* Title */
+.title {
+  font-size: 3rem; /* text-5xl */
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1e293b; /* Tailwind text-slate-900 */
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+/* Title Accent */
+.titleAccent {
+  color: #3b82f6; /* Tailwind blue-500 */
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 500;
+  color: #6b7280; /* Tailwind text-gray-500 */
+  letter-spacing: 0.02em;
+}
+
+/* Section */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 1.75rem; /* text-2xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #334155; /* text-slate-800 */
+  border-left: 4px solid #3b82f6; /* border-l-4 border-blue-500 */
+  padding-left: 12px;
+}
+
+/* List */
+.list {
+  list-style: inside disc;
+  font-size: 1.125rem; /* text-lg */
+  color: #475569; /* text-gray-600 */
+  line-height: 1.6;
+  margin-left: 0;
+  padding-left: 1.5rem;
+}
+
+/* TauCode code block */
+.codeBlockTau {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  border-radius: 12px; /* rounded-lg */
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: #1e293b; /* text-slate-900 */
+  overflow-x: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono',
+    Menlo, monospace;
+}
+
+/* JavaScript code block */
+.codeBlockJS {
+  background-color: #e0e7ff; /* bg-indigo-100 */
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: #1e293b;
+  overflow-x: auto;
+  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.2);
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono',
+    Menlo, monospace;
+}
+
+
+/* Keyword cards grid container */
+.keywordsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 5rem;
+}
+
+/* Individual keyword card */
+.keywordCard {
+  background: white;
+  width: 350px;
+  border-radius: 12px;
+  padding: 1.75rem 2.9rem;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.keywordCard:hover {
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
+  transform: translateY(-5px);
+}
+
+/* Icon wrapper */
+.iconWrapper {
+  margin-bottom: 0.75rem;
+}
+
+/* Keyword title */
+.keywordTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+/* Keyword explanation */
+.keywordExplanation {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
