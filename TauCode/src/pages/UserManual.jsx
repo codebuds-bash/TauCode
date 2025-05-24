@@ -56,6 +56,33 @@ export default function UserManual() {
       <article className="card">
         <header className="header">
           <h1 className="title">
+            TauCode <span className="titleAccent">Description </span>
+          </h1>
+        </header>
+        
+       <section className="Description">
+  <p>
+    <strong>TauCode</strong> is a fun, beginner-friendly programming language designed to resemble casual <strong>Haryanvi</strong> or North Indian street slang, making it relatable and humorous for learners. It simplifies JavaScript-like syntax into quirky, conversational phrases — turning code into a mix of tech and regional flavor!
+  </p>
+  <p>
+    Whether you're new to coding or want to enjoy a light-hearted twist on programming, TauCode makes writing and reading code more engaging and culturally fun.
+  </p>
+
+  <ul className="featuresList">
+    <li>✅ <strong>Desi Style: </strong> TauCode uses phrases like <code>sun le chore</code> or <code>bol bera()</code> to mirror common spoken lingo.</li>
+    <li>✅ <strong>JavaScript Compatible:</strong> TauCode gets compiled or interpreted into standard JavaScript under the hood.</li>
+    <li>✅ <strong>Easy to Learn:</strong> Designed to make programming concepts approachable using native-like expressions.</li>
+    <li>✅ <strong>Fun to Use:</strong> Adds humor and personality to regular coding tasks.</li>
+  </ul>
+</section>
+
+        <br />
+
+
+
+
+        <header className="header">
+          <h1 className="title">
             TauCode <span className="titleAccent">Keyword Guide</span>
           </h1>
           <p className="subtitle">
@@ -72,6 +99,56 @@ export default function UserManual() {
             </div>
           ))}
         </section>
+        <br />
+        <br />
+
+        <header className="header">
+          <h1 className="title">
+            TauCode <span className="titleAccent">Example </span>
+          </h1>
+        </header>
+        
+       <section className="Example flex justify-center top-10">
+  <div className="CodeBox">
+    <div className="Buttons">
+      <span>🔴</span>
+      <span>🟡</span>
+      <span>🟢</span>
+    </div>
+
+    <pre>
+      <code>
+        <span className="keyword">sun le chore</span>
+        {"\n"}
+        <span className="keyword">le le</span> x = 5;
+        {"\n"}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x ka maan hai: "</span> + x);
+        {"\n"}
+        <span className="keyword">yo ho to</span>(x &gt; 0) {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x positive hai"</span>);
+        {"\n"}{"}"}
+        <span className="keyword"> na ho to</span> {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x negative ya zero hai"</span>);
+        {"\n"}{"}"}
+        {"\n"}
+        <span className="keyword">jab tak yo ho</span>(x &lt; 10) {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x abhi bhi 10 se chhota hai: "</span> + x);
+        {"\n  "}x = x + 1;
+        {"\n"}{"}"}
+        {"\n"}
+        <span className="keyword">ho liya kaam</span>
+      </code>
+    </pre>
+  </div>
+</section>
+
       </article>
     </main>
   );

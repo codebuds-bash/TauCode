@@ -5,7 +5,11 @@
     font-family: 'Poppins', sans-serif;
     }
 /* UserManual.css */
-
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    src: url(../src/assets/JetBrainsMono-Regular.ttf) format('truetype');
+}
 /* Container */
 .container {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -163,4 +167,111 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   font-size: 1rem;
   color: #475569;
   line-height: 1.5;
+}
+
+
+.Description {
+  margin-bottom: 3rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151; /* Tailwind gray-700 */
+}
+
+.Description p {
+  margin-bottom: 1rem;
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.featuresList li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.featuresList code {
+  background: #f3f4f6; /* gray-100 */
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+
+.CodeBox pre {
+    font-family: 'JetBrains Mono';
+    
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f8f8f2; /* Light text color */
+}
+
+.Example {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.CodeBox {
+  background-color: #1e1e1e; /* Dark code editor look */
+  color: #ffffff;
+  font-family: 'JetBrains Mono';
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  max-height: 400px;
+  position: relative;
+}
+
+.Buttons {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+pre {
+  margin-top: 2rem;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Keyword styling for TauCode */
+.CodeBox code {
+    font-family: 'JetBrains Mono';
+  display: block;
+  color: #d4d4d4;
+}
+
+.CodeBox code::selection {
+    font-family: 'JetBrains Mono';
+  background-color: #264f78;
+  color: #ffffff;
+}
+
+/* Optional syntax highlight simulation */
+.CodeBox code span.keyword {
+    font-family: 'JetBrains Mono';
+  color: #569cd6; /* Blue for keywords */
+  font-weight: bold;
+}
+
+.CodeBox code span.string {
+    font-family: 'JetBrains Mono';
+  color: #ce9178; /* Orange-red for strings */
+}
+
+.CodeBox code span.comment {
+    font-family: 'JetBrains Mono';
+  color: #6a9955; /* Green for comments */
+  font-style: italic;
 }
