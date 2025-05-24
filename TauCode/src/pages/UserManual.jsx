@@ -5,48 +5,48 @@ import "../styles/UserManual.css"; // Ensure you have the correct path to your C
 const keywords = [
   {
     keyword: "sun le chore",
-    explanation: "This line is removed during translation, usually comments or irrelevant lines.",
-    icon: <FiHelpCircle size={24} color="#3b82f6" />,
+    explanation: "Start of the TauCode program, similar to 'function main()' (optional)",
+    icon: <FiHelpCircle size={24} color="#F6A83B " />,
   },
   {
     keyword: "ho liya kaam",
-    explanation: "Another line removed during translation, often used as end markers.",
-    icon: <FiAlertCircle size={24} color="#3b82f6" />,
+    explanation: "End of the TauCode program, similar to 'function main()' (optional).",
+    icon: <FiAlertCircle size={24} color="#3BF682 " />,
   },
   {
     keyword: "# comment",
-    explanation: "Lines starting with '#' are comments and removed from output.",
-    icon: <FiCommand size={24} color="#3b82f6" />,
+    explanation: "Lines starting with '# or //' are comments and removed from output.",
+    icon: <FiCommand size={24} color="#111827 " />,
   },
   {
     keyword: "le le",
-    explanation: "Used to declare variables, translated to 'var' in JS.",
-    icon: <FiCode size={24} color="#3b82f6" />,
+    explanation: "Used to declare variables, le le x = 5;",
+    icon: <FiCode size={24} color="#F63B82 " />,
   },
   {
     keyword: "bol bera()",
-    explanation: "This translates to 'console.log()', used for logging output.",
-    icon: <FiLogIn size={24} color="#3b82f6" />,
+    explanation: "Print statement, used for logging output.",
+    icon: <FiLogIn size={24} color="#6366F1" />,
   },
   {
-    keyword: "yo ho to",
+    keyword: "yo ho to(condition)",
     explanation: "Represents an 'if' condition in the code.",
-    icon: <FiPlay size={24} color="#3b82f6" />,
+    icon: <FiPlay size={24} color="#F87171" />,
   },
   {
     keyword: "na ho to",
     explanation: "Represents an 'else' condition.",
-    icon: <FiCornerUpLeft size={24} color="#3b82f6" />,
+    icon: <FiCornerUpLeft size={24} color="#FBBF24" />,
   },
   {
-    keyword: "jab tak yo ho",
+    keyword: "jab tak yo ho(condition)",
     explanation: "Used to create 'while' loops.",
-    icon: <FiCode size={24} color="#3b82f6" />,
+    icon: <FiCode size={24} color="#FDBA74" />,
   },
   {
     keyword: "pooch le()",
-    explanation: "Translates to 'prompt()', used for user input.",
-    icon: <FiHelpCircle size={24} color="#3b82f6" />,
+    explanation: "Used for taking input from users,for example:  le le x = pooch le();",
+    icon: <FiHelpCircle size={24} color="#3BF6F0" />,
   },
 ];
 
