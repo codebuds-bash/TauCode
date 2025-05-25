@@ -1,13 +1,18 @@
 import React from 'react'
 import '../styles/Home.css'; 
 import '../App'
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <>
-      <nav className='navbarhome flex'>
+       <nav className='navbarhome flex justify-between items-center px-4 py-2'>
         <div className="logodiv flex justify-start items-baseline gap-2">   
           <div className="logotext">
             <span className='text-black font-light text-7xl '>Tau </span>
@@ -17,19 +22,24 @@ const Home = () => {
             <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="70" height="70" />
           </div>
         </div>
-        
-        <ul className='navhomes-links flex align-center justify-between gap-10 text-black font-light text-lg'>
+
+        <div className="hamburger md:hidden" onClick={toggleMenu}>
+          <div className="bar w-8 h-1 border my-1"></div>
+          <div className="bar w-8 h-1 border my-1"></div>
+          <div className="bar w-8 h-1 border my-1"></div>
+        </div>
+
+        <ul className={`navhomes-links flex-col md:flex-row md:flex items-center gap-10 text-black font-light text-lg ${menuOpen ? 'flex' : 'hidden'} md:flex`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/documentation">Documentation</Link></li>
           <li>
-  <Link 
-    to="/compiler" 
-    className="PlayGround inline-block text-white bg-black rounded-md px-14 py-2 hover:bg-gray-800 transition duration-300"
-  >
-    PlayGround
-  </Link>
-</li>
-          
+            <Link 
+              to="/compiler" 
+              className="PlayGround inline-block text-white bg-black rounded-md px-14 py-2 hover:bg-gray-800 transition duration-300"
+            >
+              PlayGround
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -57,7 +67,7 @@ const Home = () => {
           <Link to="/compiler" className='btn btn-primary rounded-2xl text-1xl text-white bg-black '>PlayGround</Link>
           <Link to="/documentation" className='btn btn-secondary rounded-2xl text-1xl'>Documentation</Link>
         </div>
-        </div>
+      </div>
         <div className="imagediv">
           <img src="../70881520585.png" alt="" />
         </div>

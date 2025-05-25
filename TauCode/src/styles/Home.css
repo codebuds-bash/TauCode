@@ -1,32 +1,34 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=Varela+Round&display=swap');
 
-
 @font-face {
   font-family: 'poppins';
-  font-style: normal;
   src: url(../src/assets/Poppins-Regular.ttf) format('truetype');
-} 
+}
 @font-face {
   font-family: 'Rekalgera';
   src: url(../src/assets/RekalgeraRegular-3lrvp.otf) format('opentype');
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
   color: #010101;
-  font-family: 'poppins';
+  font-family: 'poppins', sans-serif;
   scroll-behavior: smooth;
 }
+
 .logodiv span {
   font-family: 'Rekalgera', sans-serif;
 }
-.nav-links{
+
+.nav-links {
   font-family: 'poppins', sans-serif;
   font-weight: 500;
 }
+
 .navbarhome {
   width: 100%;
   display: flex;
@@ -41,71 +43,72 @@ body {
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
-.PlayGround{
-  padding: 2px 20px
+
+.PlayGround {
+  padding: 2px 20px;
 }
+
 .navhomes-links li {
   align-items: center;
   display: flex;
-} 
+}
 
 .Hero {
   width: 100%;
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.leftdiv{
+
+.leftdiv {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
-  
 }
 
-
-.about{
+.about {
   width: 100%;
   height: 100vh;
-  
 }
 
-.Hero img{
+.Hero img {
   margin-top: 100px;
-  
-  
+  max-width: 100%;
+  height: auto;
 }
 
-.btn-primary{
-  border: 1px solid #000;
-  padding: 0.5rem 1rem;
-}
-
+.btn-primary,
 .btn-secondary {
   border: 1px solid #000;
   padding: 0.5rem 1rem;
 }
-.leftdiv span{
+
+.leftdiv span {
   font-family: poppins, sans-serif;
   font-size: 2.5rem;
   color: #000;
 }
 
-.descSpan span{
+.descSpan span {
   font-family: 'poppins', sans-serif;
   font-size: 1.2rem;
   color: #000;
   margin-top: 1rem;
 }
 
-.Slogan h1{
+.Slogan h1 {
   padding: 0.5rem 20px;
   border-radius: 10px;
   background: #000;
+  color: white;
 }
 
-.Slogan{
+.Slogan {
   margin-top: 20px;
   top: 0;
   width: 100%;
@@ -113,17 +116,140 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
+
 .CodeBox {
-  background-color: #1e1e1e; /* Dark code editor look */
+  background-color: #1e1e1e;
   color: #ffffff;
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrains Mono', monospace;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
-  min-width: 1200px;
+  overflow-x: auto;
+  min-width: unset;
+}
 
-  position: relative;
+/* ───────────────────────────────
+   📱 Media Queries for Responsiveness
+──────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .Hero{
+    margin-top: 100px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    
+  }
+  .leftdiv {
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .leftdiv span {
+    font-size: 2rem;
+  }
+
+  .descSpan span {
+    font-size: 1rem;
+  }
+
+  .Hero {
+    flex-direction: column;
+  }
+
+  .Hero img {
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .CodeBox {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarhome {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navhomes-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .Slogan h1 {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .leftdiv span {
+    font-size: 1.6rem;
+  }
+
+  .descSpan span {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftdiv span {
+    font-size: 1.4rem;
+  }
+
+  .descSpan span {
+    font-size: 0.85rem;
+  }
+
+  .CodeBox {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+
+
+/* Responsive Menu */
+.navbarhome {
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+}
+
+.navhomes-links li {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .navhomes-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .navhomes-links li {
+    margin-bottom: 0;
+  }
 }
