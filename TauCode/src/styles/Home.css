@@ -222,8 +222,10 @@ body {
 
 @media (max-width: 768px) {
   .navbarhome {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
     padding: 1rem;
   }
 
@@ -281,10 +283,7 @@ body {
   flex-wrap: wrap;
 }
 
-.hamburger {
-  cursor: pointer;
-  display: block;
-}
+
 
 .navhomes-links li {
   margin-bottom: 10px;

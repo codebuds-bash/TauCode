@@ -24,11 +24,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hamburger md:hidden" onClick={toggleMenu}>
-          <div className="bar w-8 h-1 border my-1"></div>
-          <div className="bar w-8 h-1 border my-1"></div>
-          <div className="bar w-8 h-1 border my-1"></div>
-        </div>
+        <div className="hamburger md:hidden flex flex-col gap-2" onClick={toggleMenu}>
+  <div className="w-15 h-1 bg-black rounded"></div>
+  <div className="w-10 h-1 bg-black rounded"></div>
+  <div className="w-5 h-1 bg-black rounded"></div>
+</div>
+
+
+
 
         <ul className={`navhomes-links flex-col md:flex-row md:flex items-center gap-10 text-black font-light text-lg ${menuOpen ? 'flex' : 'hidden'} md:flex`}>
           <li><Link to="/">Home</Link></li>
