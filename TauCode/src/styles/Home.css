@@ -9,7 +9,10 @@
   font-family: 'Rekalgera';
   src: url(../src/assets/RekalgeraRegular-3lrvp.otf) format('opentype');
 }
-
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(../src/assets/JetBrainsMono-Regular.ttf) format('truetype');
+}
 :root {
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);

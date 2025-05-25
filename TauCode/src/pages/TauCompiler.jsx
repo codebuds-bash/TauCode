@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import MonacoEditor from '@monaco-editor/react';
 import axios from 'axios';
 
-
 import '../monaco-overrides.css';
 
 import { FiPlay, FiDownload, FiUser, FiLogOut, FiLogIn, FiEdit, FiAlignLeft  } from 'react-icons/fi';
@@ -28,11 +27,16 @@ function TauCompiler() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [authType, setAuthType] = useState('login');
   const [activeTab, setActiveTab] = useState('editor');
+  const navigate = useNavigate();
 
   const tauKeywords = [
     'sun', 'le', 'chore', 'ho', 'liya', 'kaam',
     'bol', 'bera', 'yo', 'to', 'na', 'jab', 'tak', 'pooch'
   ];
+
+  function handleClick(){
+    navigate('/documentation');
+  }
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -45,6 +49,8 @@ function TauCompiler() {
       }
     }
   }, []);
+
+  
 
   const handleEditorChange = (value) => {
     setCode(value);
@@ -202,8 +208,7 @@ function TauCompiler() {
             className="Use-button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-
-
+            onClick={handleClick}
           >
             <FiAlignLeft className="icon" />
             User manual
