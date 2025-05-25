@@ -10,6 +10,14 @@
   src: url(../src/assets/RekalgeraRegular-3lrvp.otf) format('opentype');
 }
 
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --glass-blur: 8px;
+  --android-fallback-bg: rgba(255, 255, 255, 0.95);
+}
+
 html,
 body {
   width: 100%;
@@ -29,6 +37,7 @@ body {
   font-weight: 500;
 }
 
+/* Improved Glassmorphism with Android Fallback */
 .navbarhome {
   width: 100%;
   display: flex;
@@ -38,12 +47,38 @@ body {
   top: 0;
   position: fixed;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--android-fallback-bg);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   flex-wrap: wrap;
+}
+
+/* Apply glass effect only on supported browsers */
+@supports (backdrop-filter: blur(var(--glass-blur))) or (-webkit-backdrop-filter: blur(var(--glass-blur))) {
+  .navbarhome {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+}
+
+/* Alternative approach for browsers that don't support backdrop-filter */
+.navbarhome::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-bg);
+  z-index: -1;
+}
+
+@supports (backdrop-filter: blur(var(--glass-blur))) or (-webkit-backdrop-filter: blur(var(--glass-blur))) {
+  .navbarhome::before {
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
 }
 
 .PlayGround {
@@ -130,18 +165,26 @@ body {
   min-width: unset;
 }
 
+/* Code syntax highlighting */
+.CodeBox .keyword {
+  color: #569cd6;
+}
+.CodeBox .string {
+  color: #ce9178;
+}
+
 /* ───────────────────────────────
    📱 Media Queries for Responsiveness
 ──────────────────────────────── */
 
 @media (max-width: 1024px) {
-  .Hero{
+  .Hero {
     margin-top: 100px;
     padding: 1rem;
     display: flex;
     flex-direction: column; 
-    
   }
+  
   .leftdiv {
     width: 100%;
     padding: 1rem;
@@ -151,7 +194,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .leftdiv span {
@@ -208,6 +250,14 @@ body {
   .btn-secondary {
     font-size: 0.9rem;
   }
+
+  /* Simplify glass effect on mobile */
+  .navbarhome {
+    background: var(--android-fallback-bg);
+  }
+  .navbarhome::before {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -224,8 +274,6 @@ body {
     padding: 0.75rem;
   }
 }
-
-
 
 /* Responsive Menu */
 .navbarhome {
