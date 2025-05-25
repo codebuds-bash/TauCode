@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Home.css'; 
 import '../App'
+import Footer from '../components/Footer';
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
@@ -119,11 +120,6 @@ const Home = () => {
   </div>
      </div>
       </section>
-
-
-      
-      
-
     </>
   )
 }
