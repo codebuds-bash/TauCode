@@ -64,8 +64,50 @@ const Home = () => {
         
       </section>
 
-      <section className='Slogan flex justify-center items-center mt-10'>
+      <section className='Slogan' >
         <h1 className='text-4xl text-white '>"Thane reel mai coder dekhe se, mka real mai coder ham se 😎"</h1>
+
+        <br />
+     <div className="outercodeboxdiv">
+       <div className="CodeBox">
+    <div className="Buttons">
+      <span>🔴</span>
+      <span>🟡</span>
+      <span>🟢</span>
+    </div>
+
+    <pre>
+      <code>
+        <span className="keyword">sun le chore</span>
+        {"\n"}
+        <span className="keyword">le le</span> x = 5;
+        {"\n"}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x ka maan hai: "</span> + x);
+        {"\n"}
+        <span className="keyword">yo ho to</span>(x &gt; 0) {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x positive hai"</span>);
+        {"\n"}{"}"}
+        <span className="keyword"> na ho to</span> {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x negative ya zero hai"</span>);
+        {"\n"}{"}"}
+        {"\n"}
+        <span className="keyword">jab tak yo ho</span>(x &lt; 10) {"{"}
+        {"\n  "}
+        <span className="keyword">bol bera</span>
+        (<span className="string">"x abhi bhi 10 se chhota hai: "</span> + x);
+        {"\n  "}x = x + 1;
+        {"\n"}{"}"}
+        {"\n"}
+        <span className="keyword">ho liya kaam</span>
+      </code>
+    </pre>
+  </div>
+     </div>
       </section>
 
 
