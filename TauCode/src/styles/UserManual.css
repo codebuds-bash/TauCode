@@ -1,15 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    }
+
 /* UserManual.css */
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
     src: url(../src/assets/JetBrainsMono-Regular.ttf) format('truetype');
 }
+
+/* Global reset and fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Font-face remains unchanged */
+
 /* Container */
 .container {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -20,17 +27,22 @@
   color: #374151; /* Tailwind text-gray-700 */
   display: flex;
   justify-content: center;
+  /* For small screens allow flex-wrap and column direction */
+  flex-wrap: wrap;
 }
 
 /* Card */
 .card {
   width: 100%;
+  max-width: 900px;
   background-color: white; /* bg-white */
   border-radius: 16px; /* rounded-xl */
-   /* shadow-lg with blue tint */
   padding: 2.5rem 3rem; /* p-10 sm:p-12 */
   line-height: 1.7;
   user-select: text;
+  
+  /* Responsive padding */
+  transition: padding 0.3s ease;
 }
 
 /* Header */
@@ -48,11 +60,8 @@
   color: #1e293b; /* Tailwind text-slate-900 */
   margin-bottom: 6px;
   line-height: 1.1;
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
-
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 
 /* Title Accent */
 .titleAccent {
@@ -92,48 +101,46 @@
   padding-left: 1.5rem;
 }
 
-/* TauCode code block */
-.codeBlockTau {
-  background-color: #f3f4f6; /* bg-gray-100 */
-  border-radius: 12px; /* rounded-lg */
-  padding: 1.5rem;
-  font-size: 1rem;
-  color: #1e293b; /* text-slate-900 */
-  overflow-x: auto;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-  white-space: pre-wrap;
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono',
-    Menlo, monospace;
-}
-
-/* JavaScript code block */
-.codeBlockJS {
-  background-color: #e0e7ff; /* bg-indigo-100 */
+/* Code blocks */
+.codeBlockTau, .codeBlockJS {
   border-radius: 12px;
   padding: 1.5rem;
   font-size: 1rem;
-  color: #1e293b;
   overflow-x: auto;
-  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.2);
   white-space: pre-wrap;
- 
-}
-span {
-   
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
-/* Keyword cards grid container */
+.codeBlockTau {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  color: #1e293b; /* text-slate-900 */
+}
+
+.codeBlockJS {
+  background-color: #e0e7ff; /* bg-indigo-100 */
+  color: #1e293b;
+  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Keywords grid */
 .keywordsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 5rem;
+  justify-items: center;
+  padding: 0 1rem;
 }
 
-/* Individual keyword card */
+/* Keyword cards */
 .keywordCard {
   background: white;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 12px;
   padding: 1.75rem 2.9rem;
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
@@ -149,12 +156,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   transform: translateY(-5px);
 }
 
-/* Icon wrapper */
 .iconWrapper {
   margin-bottom: 0.75rem;
 }
 
-/* Keyword title */
 .keywordTitle {
   font-size: 1.5rem;
   font-weight: 700;
@@ -162,14 +167,13 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   margin-bottom: 0.5rem;
 }
 
-/* Keyword explanation */
 .keywordExplanation {
   font-size: 1rem;
   color: #475569;
   line-height: 1.5;
 }
 
-
+/* Description */
 .Description {
   margin-bottom: 3rem;
   font-size: 1.125rem;
@@ -201,21 +205,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   font-size: 0.95rem;
 }
 
-
-.CodeBox pre {
-    font-family: 'JetBrains Mono';
-    
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #f8f8f2; /* Light text color */
-}
-
-.Example {
-  padding: 2rem 1rem;
-  background-color: #ffffff;
-  min-height: 100vh;
-}
-
+/* Code box */
 .CodeBox {
   background-color: #1e1e1e; /* Dark code editor look */
   color: #ffffff;
@@ -227,6 +217,43 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   max-width: 800px;
   max-height: 400px;
   position: relative;
+  overflow-y: auto;
+}
+
+.CodeBox pre {
+  font-family: 'JetBrains Mono';
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f8f8f2; /* Light text color */
+  margin-top: 2rem;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.CodeBox code {
+  font-family: 'JetBrains Mono';
+  display: block;
+  color: #d4d4d4;
+}
+
+.CodeBox code::selection {
+  background-color: #264f78;
+  color: #ffffff;
+}
+
+.CodeBox code span.keyword {
+  color: #569cd6; /* Blue for keywords */
+  font-weight: bold;
+}
+
+.CodeBox code span.string {
+  color: #ce9178; /* Orange-red for strings */
+}
+
+.CodeBox code span.comment {
+  color: #6a9955; /* Green for comments */
+  font-style: italic;
 }
 
 .Buttons {
@@ -237,41 +264,89 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   left: 1rem;
 }
 
-pre {
-  margin-top: 2rem;
-  white-space: pre-wrap;
-  line-height: 1.7;
-  font-size: 1rem;
-  word-break: break-word;
+/* Example */
+.Example {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
-/* Keyword styling for TauCode */
-.CodeBox code {
-    font-family: 'JetBrains Mono';
-  display: block;
-  color: #d4d4d4;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card {
+    padding: 2rem 2rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  .keywordsGrid {
+    gap: 3rem;
+  }
 }
 
-.CodeBox code::selection {
-    font-family: 'JetBrains Mono';
-  background-color: #264f78;
-  color: #ffffff;
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    padding: 1.5rem 1.5rem;
+    max-width: 100%;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .sectionTitle {
+    font-size: 1.25rem;
+    padding-left: 8px;
+    border-left-width: 3px;
+  }
+  .keywordsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  .keywordCard {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    max-width: 100%;
+  }
+  .featuresList li {
+    font-size: 1rem;
+  }
+  .CodeBox {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .Buttons {
+    top: 0.8rem;
+    left: 0.8rem;
+  }
 }
 
-/* Optional syntax highlight simulation */
-.CodeBox code span.keyword {
-    font-family: 'JetBrains Mono';
-  color: #569cd6; /* Blue for keywords */
-  font-weight: bold;
-}
-
-.CodeBox code span.string {
-    font-family: 'JetBrains Mono';
-  color: #ce9178; /* Orange-red for strings */
-}
-
-.CodeBox code span.comment {
-    font-family: 'JetBrains Mono';
-  color: #6a9955; /* Green for comments */
-  font-style: italic;
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+  .featuresList li {
+    font-size: 0.95rem;
+  }
+  .card {
+    padding: 1rem 1rem;
+  }
+  .CodeBox {
+    padding: 1rem;
+    max-height: 300px;
+  }
 }
