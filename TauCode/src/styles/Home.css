@@ -161,7 +161,7 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  min-width: 1050px;
+  min-width: 1200px;
 
   }
 
@@ -216,7 +216,7 @@ body {
   .CodeBox {
     padding: 1rem;
     font-size: 0.95rem;
-    min-width: 800px;
+    min-width: 500px;
   }
 }
 
@@ -273,7 +273,6 @@ body {
   .CodeBox {
     font-size: 0.85rem;
     padding: 0.75rem;
-    max-width: 200px;
   }
 }
 
@@ -301,9 +300,5 @@ body {
   }
   .navhomes-links li {
     margin-bottom: 0;
-  }
-
-  .CodeBox{
-    min-width: 800px;
   }
 }
