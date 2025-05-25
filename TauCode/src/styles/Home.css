@@ -26,6 +26,7 @@ body {
   color: #010101;
   font-family: 'poppins', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .logodiv span {
@@ -160,7 +161,7 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  min-width: 1200px;
+  min-width: 1050px;
 
   }
 
@@ -176,7 +177,7 @@ body {
    📱 Media Queries for Responsiveness
 ──────────────────────────────── */
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px ) {
   .Hero {
     margin-top: 100px;
     padding: 1rem;
@@ -215,6 +216,7 @@ body {
   .CodeBox {
     padding: 1rem;
     font-size: 0.95rem;
+    min-width: 800px;
   }
 }
 
@@ -271,6 +273,7 @@ body {
   .CodeBox {
     font-size: 0.85rem;
     padding: 0.75rem;
+    max-width: 200px;
   }
 }
 
@@ -298,5 +301,9 @@ body {
   }
   .navhomes-links li {
     margin-bottom: 0;
+  }
+
+  .CodeBox{
+    min-width: 800px;
   }
 }
