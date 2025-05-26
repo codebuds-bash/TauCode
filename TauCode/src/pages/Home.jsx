@@ -123,6 +123,31 @@ const Home = () => {
   </div>
      </div>
       </section>
+
+
+      <section className="social-links w-full flex flex-col justify-center items-center gap-6 mt-16 px-4">
+  <div className="outerdivsocial w-full max-w-3xl bg-white rounded-2xl p-10 flex flex-col justify-center items-center gap-4 transition-all duration-300 ">
+    <h1 className="text-2xl font-semibold text-gray-800">Made for fun by</h1>
+
+    <div className="namediv flex flex-col sm:flex-row gap-4 mt-2">
+      <span className="socialspan  text-gray-700 px-6 py-2 rounded-full text-lg font-medium border  "><a href="https://www.linkedin.com/in/dhruv-suthar-42174228b/">DHRUV </a></span>
+      <span className="socialspan  text-gray-700 px-6 py-2 rounded-full text-lg font-medium border"><a href="https://www.linkedin.com/in/vishakha-saini-b7b14828b/">VISHAKHA</a></span>
+    </div>
+
+    <p className="text-sm text-gray-500 mt-4">Thanks for checking this out! We hope you enjoy it 💫</p>
+
+    <div className="flex gap-4 mt-4">
+      <a href="https://www.instagram.com/dhruv_sutar_779/" className="text-blue-600 hover:text-blue-800 transition">Instagram</a>
+      <a href="https://www.linkedin.com/in/vishakha-saini-b7b14828b/" className="text-pink-600 hover:text-pink-800 transition">LinkedIn</a>
+      <a href="https://github.com/codebuds-bash" className="text-green-600 hover:text-green-800 transition">GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
     </>
   )
 }

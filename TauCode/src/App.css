@@ -220,7 +220,7 @@ button {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .editor-container {
@@ -567,3 +567,5 @@ button {
   align-items: center;
   box-shadow: 0 2px 4px rgba(255, 202, 29, 0.1);
 }
+
+

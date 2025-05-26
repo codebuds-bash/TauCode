@@ -176,6 +176,24 @@ body {
   color: #ce9178;
 }
 
+
+.social-links{
+  margin-top: 50px;
+}
+.outerdivsocial{
+  padding: 2rem;
+}
+
+
+.socialspan{
+  display: flex;
+}
+
+.namediv span{
+  padding: 0.5rem;
+}
+
+
 /* ───────────────────────────────
    📱 Media Queries for Responsiveness
 ──────────────────────────────── */
