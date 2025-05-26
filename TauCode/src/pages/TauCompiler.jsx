@@ -171,7 +171,7 @@ function TauCompiler() {
           <a href="/" target="_blank" rel="noopener noreferrer">
             <div className="logodiv flex justify-start items-baseline gap-2">   
               <div className="logotext">
-                <span className='text-black font-light text-7xl '>Tau </span> <span className='text-black font-extralight '> Code </span>
+                <span className='text-black font-light text-7xl '>Desi </span> <span className='text-black font-extralight '> Code </span>
               </div>
               <div className="logoimage">
                 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="70" height="70" />

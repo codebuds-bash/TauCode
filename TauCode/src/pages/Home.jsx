@@ -16,7 +16,7 @@ const Home = () => {
        <nav className='navbarhome flex justify-between items-center px-4 py-2'>
         <div className="logodiv flex justify-start items-baseline gap-2">   
           <div className="logotext">
-            <span className='text-black font-light text-7xl '>Tau </span>
+            <span className='text-black font-light text-7xl '>Desi </span>
             <span className='text-black font-light text-5xl '> Code </span>
           </div>
           <div className="logoimage">
@@ -54,14 +54,14 @@ const Home = () => {
           <div className="spandiv">
             <span className='text-5xl'> Ram Ram </span><span className='text-5xl'> Mitar!!!!! 🙏</span>
             <p className="text-left text-lg mt-6 text-gray-700">
-              TauCode mein semicolon lagana optional hai, lekin code paar break lagana na se😌☕<br/>
+              DesiCode mein semicolon lagana optional hai, lekin code paar break lagana na se😌☕<br/>
               "Badmosi aab coding mein bhi chalegi, par yaar ke saath chalegi!"
             </p>
             <br />
             
             <p className="text-start text-lg font-semibold mt-6 text-gray-800">
               Tau kehwe: "Error na hai, thodi si hichki se… seedha kar denge!" 🔧🔥<br/>
-              TauCode likhne waale line-by-line nahi, <i>dialogue-by-dialogue</i> likhte hain!
+              DesiCode likhne waale line-by-line nahi, <i>dialogue-by-dialogue</i> likhte hain!
             </p>
             <br/>
 
