@@ -1,18 +1,16 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=Varela+Round&display=swap');
+
+
 
 @font-face {
-  font-family: 'poppins';
-  src: url(../src/assets/Poppins-Regular.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Rekalgera';
-  src: url(../src/assets/RekalgeraRegular-3lrvp.otf) format('opentype');
+  src: url('/fonts/RekalgeraRegular-3lrvp.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url(../src/assets/JetBrainsMono-Regular.ttf) format('truetype');
-}
+
+
 :root {
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
@@ -58,13 +56,33 @@ body {
 }
 
 /* Apply glass effect only on supported browsers */
-@supports (backdrop-filter: blur(var(--glass-blur))) or (-webkit-backdrop-filter: blur(var(--glass-blur))) {
+@supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
   .navbarhome {
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
+    background: rgba(255, 255, 255, 0.95); /* fallback */
   }
 }
+
+/* Glassmorphism Effect */
+.navbarhome {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Standard property */
+  backdrop-filter: blur(8px);
+  /* Safari support */
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Fallback for unsupported browsers */
+@supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
+  .navbarhome {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+
+
 
 /* Alternative approach for browsers that don't support backdrop-filter */
 .navbarhome::before {
