@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Home.css'; 
 import '../App'
-import Footer from '../components/Footer';
+
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
@@ -14,13 +14,13 @@ const Home = () => {
   return (
     <>
        <nav className='navbarhome flex justify-between items-center px-4 py-2'>
-        <div className="logodiv flex justify-start items-baseline gap-2">   
+        <div className="logodiv flex justify-start items-center gap-2">   
           <div className="logotext">
-            <span className='text-black font-light text-7xl '>Desi </span>
-            <span className='text-black font-light text-5xl '> Code </span>
+            <span className='span1 text-black font-light text-7xl '>Desi </span>
+            <span className='span2 text-black font-light text-5xl '> Code </span>
           </div>
-          <div className="logoimage">
-            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="70" height="70" />
+          <div className="logoimage flex justify-center items-center">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="50" height="50" />
           </div>
         </div>
 

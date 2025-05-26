@@ -40,6 +40,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.span1{
+  font-size: 3rem;
+
+
+}
+.span2{
+  font-size: 3rem;
+  -webkit-text-stroke: 1.5px black;
+  color: transparent;
+}
 
 .app {
   min-height: 100vh;
