@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FiCode,
   FiPlay,
@@ -9,6 +10,8 @@ import {
   FiAlertCircle,
 } from "react-icons/fi";
 import "../styles/UserManual.css"; // Ensure you have the correct path to your CSS file
+
+
 
 const keywords = [
   {
@@ -64,7 +67,30 @@ const keywords = [
 
 export default function UserManual() {
   return (
-    <main className="container">
+    
+    
+
+    <div className="UserParent flex flex-col  min-h-screen ">
+      <div className="navbarUser ">
+        <ul className="flex justify-between  ">
+          <li className="Userli text-2xl bg-black text-white  "><Link to ='/'>Home</Link></li>
+          
+          <div className="logo-img-text flex items-center justify-center gap">
+            <div className="logotext">
+            <span className='span1 text-black font-light text-7xl '>Desi </span>
+            <span className='span2 text-black font-light text-5xl '> Code </span>
+          </div>
+          <div className="logoimage flex justify-center items-center">
+            <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png" alt="Disguised Face" width="50" height="50" />
+          </div>
+          </div>
+
+
+          <li className="Userli text-2xl bg-black text-white " ><Link to ="/compiler"> PlayGround</Link> </li>
+        </ul>
+      </div>
+      
+      <main className="container">
       <article className="card">
         <header className="header">
           <h1 className="title">
@@ -183,5 +209,7 @@ export default function UserManual() {
         </section>
       </article>
     </main>
+    </div>
+    
   );
 }
