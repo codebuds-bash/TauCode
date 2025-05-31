@@ -112,6 +112,7 @@ body {
 .navhomes-links li {
   align-items: center;
   display: flex;
+  
 }
 
 .Hero {
@@ -205,6 +206,14 @@ body {
 .socialspan {
   display: flex;
 }
+.socialspan:hover {
+  background: #000;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
+
+ 
+}
 
 .namediv span {
   padding: 0.5rem;
@@ -215,7 +224,7 @@ body {
 }
 .span1 {
   font-size: 3rem;
-}
+} 
 .span2 {
   font-size: 3rem;
   -webkit-text-stroke: 1.5px black;

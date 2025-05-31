@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/Home.css'; 
 import '../App'
 
+import { Instagram, Linkedin, Github } from 'lucide-react';
+
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
@@ -134,13 +136,25 @@ const Home = () => {
       <span className="socialspan  text-gray-700 px-6 py-2 rounded-full text-lg font-medium border"><a href="https://www.linkedin.com/in/vishakha-saini-b7b14828b/">VISHAKHA</a></span>
     </div>
 
-    <p className="text-sm text-gray-500 mt-4">Thanks for checking this out! We hope you enjoy it 💫</p>
+    <p className="text-xl text-gray-500 mt-4">Thanks for checking this out! Check It on Social </p>
 
-    <div className="flex gap-4 mt-4">
-      <a href="https://www.instagram.com/dhruv_sutar_779/" className="text-blue-600 hover:text-blue-800 transition">Instagram</a>
-      <a href="https://www.linkedin.com/in/vishakha-saini-b7b14828b/" className="text-pink-600 hover:text-pink-800 transition">LinkedIn</a>
-      <a href="https://github.com/codebuds-bash" className="text-green-600 hover:text-green-800 transition">GitHub</a>
-    </div>
+    
+
+<div className="flex gap-10 mt-6">
+  <a href="https://www.instagram.com/dhruv_sutar_779/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110 flex items-center gap-2">
+    <Instagram size={25} />
+    Instagram
+  </a>
+  <a href="https://www.linkedin.com/in/dhruv-suthar-42174228b//" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition transform hover:scale-110 flex items-center gap-2">
+    <Linkedin size={25} />
+    LinkedIn
+  </a>
+  <a href="https://github.com/codebuds-bash" target="_blank" rel="noopener noreferrer" className="text-black hover:text-grey-400 transition transform hover:scale-110 flex items-center gap-2">
+    <Github size={25} />
+    GitHub
+  </a>
+</div>
+
   </div>
 </section>
 
