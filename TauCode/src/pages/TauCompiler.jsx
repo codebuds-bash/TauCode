@@ -19,7 +19,21 @@ import ThemeToggle from '../components/ThemeToggle';
 
 function TauCompiler() {
   const [user, setUser] = useState(null);
-  const [code, setCode] = useState();
+  const [code, setCode] = useState(`//Example dekhle pehle fir dhawa boliyo
+sun le chore
+le le x = 5;
+bol bera("x ka maan hai: " + x); //print karne ke liye
+yo ho to(x > 0) { //if statement
+  bol bera("x positive hai");
+} na ho to { //else statement
+  bol bera("x negative ya zero hai");
+}
+jab tak yo ho(x < 10) { //while loop
+  bol bera("x abhi bhi 10 se chhota hai: " + x);
+  x = x + 1;
+}
+ho liya kaam`);
+
   const [output, setOutput] = useState("No output yet. Run your code to see results here.");
   const [language, setLanguage] = useState('tau');
   const [isRunning, setIsRunning] = useState(false);
