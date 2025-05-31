@@ -20,19 +20,25 @@ import ThemeToggle from '../components/ThemeToggle';
 function TauCompiler() {
   const [user, setUser] = useState(null);
   const [code, setCode] = useState(`//Example dekhle pehle fir dhawa boliyo
-sun le chore
-le le x = 5;
-bol bera("x ka maan hai: " + x); //print karne ke liye
-yo ho to(x > 0) { //if statement
+sun le chore     //to start the program:optional
+
+
+le le x = 5;   //variable declaration
+bol bera("x ka maan hai: " + x);    //to print 
+
+
+yo ho to(x > 0) {    //if statement
   bol bera("x positive hai");
-} na ho to { //else statement
+} 
+  na ho to {     //else statement
   bol bera("x negative ya zero hai");
 }
-jab tak yo ho(x < 10) { //while loop
+
+jab tak yo ho(x < 10) {     //while loop
   bol bera("x abhi bhi 10 se chhota hai: " + x);
   x = x + 1;
 }
-ho liya kaam`);
+ho liya kaam    //end the program:optional`);
 
   const [output, setOutput] = useState("No output yet. Run your code to see results here.");
   const [language, setLanguage] = useState('tau');
@@ -82,20 +88,57 @@ ho liya kaam`);
 
     try {
       if (language === 'tau') {
-        let translated = code
-          .replace(/^sun le chore.*$/gm, "")
-          .replace(/^ho liya kaam.*$/gm, "")
-          .replace(/^#.*$/gm, "")
-          .replace(/\ble le\b/g, "var")
-          .replace(/\bbol bera\s*\((.*?)\)/g, "console.log($1)")
-          .replace(/\byo ho to\b/g, "if")
-          .replace(/\bna ho to\b/g, "else")
-          .replace(/\bjab tak yo ho\b/g, "while")
-          .replace(/\bpooch le\(\)/g, "prompt()")
-          .replace(/\n{2,}/g, "\n");
+  let translated = code
+    // Remove desi comments or instructions
+    .replace(/^sun le chore.*$/gm, "")
+    .replace(/^ho liya kaam.*$/gm, "")
+    .replace(/^#.*$/gm, "")
 
-        eval(translated);
-      } else {
+    // Variable declaration
+    .replace(/\ble le\b/g, "var")                  // le le x = 5
+    .replace(/\butha le\b/g, "let")                // utha le x = 10
+    .replace(/\bmat badal\b/g, "const")            // mat badal PI = 3.14
+
+    // Printing output
+    .replace(/\bbol bera\s*\((.*?)\)/g, "console.log($1)") // bol bera("Ram Ram");
+
+    // Conditional statements
+    .replace(/\byo ho to\b/g, "if")                // yo ho to (x == 5)
+    .replace(/\bna ho to\b/g, "else")              // na ho to
+    .replace(/\bwarna agar\b/g, "else if")         // warna agar (x == 2)
+
+    // Loops
+    .replace(/\bjab tak yo ho\b/g, "while")        // jab tak yo ho (x < 10)
+    .replace(/\baar baar\b/g, "for")               // baar baar (i = 0; i < 5; i++)
+
+    // Functions
+    .replace(/\bkaam\b/g, "function")              // kaam greet() { }
+    .replace(/\bwapis bhej\b/g, "return")          // wapis bhej x;
+
+    // Input
+    .replace(/\bpooch le\(\)/g, "prompt()")        // var name = pooch le();
+
+    // Comparisons
+    .replace(/\bbhai ho\b/g, "==")                 // if (x bhai ho 10)
+    .replace(/\bbhai bilkul ho\b/g, "===")         // if (x bhai bilkul ho 10)
+    .replace(/\bberabar na ho\b/g, "!=")           // if (x berabar na ho 5)
+
+    // Math
+    .replace(/\bjod\b/g, "+")                      // x = 2 jod 3;
+    .replace(/\bgata\b/g, "-")                     // x = 5 gata 2;
+    .replace(/\bguna\b/g, "*")                     // x = 5 guna 2;
+    .replace(/\bbhaag\b/g, "/")                    // x = 10 bhaag 2;
+
+    // Logical
+    .replace(/\bya to\b/g, "||")                   // if (x == 1 ya to x == 2)
+    .replace(/\bara\b/g, "&&")                     // if (x == 1 ara x < 10)
+
+    // Clean up
+    .replace(/\n{2,}/g, "\n");                     // remove extra blank lines
+
+  eval(translated);
+}
+ else {
         const wrappedCode = `(function() {\n${code}\n})();`;
         eval(wrappedCode);
       }

@@ -54,7 +54,9 @@ const Home = () => {
         <div className="leftdiv">
         <div className="content flex flex-col justify-center gap-4">
           <div className="spandiv">
-            <span className='text-5xl'> Ram Ram </span><span className='text-5xl'> Mitar!!!!! 🙏</span>
+            <span className='text-5xl'> Ram Ram </span><span className='text-5xl'> Mitar!!!!! 🙏</span> <br />
+            <span className='text-5xl'> Now, write code in </span> <span className='span1'>"HARYANVI"</span>
+            
             <p className="text-left text-lg mt-6 text-gray-700">
               DesiCode mein semicolon lagana optional hai, lekin code paar break lagana na se😌☕<br/>
               "Badmosi aab coding mein bhi chalegi, par yaar ke saath chalegi!"

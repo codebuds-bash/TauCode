@@ -1,13 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FiCode,
-  FiPlay,
-  FiLogIn,
-  FiCommand,
-  FiCornerUpLeft,
   FiHelpCircle,
   FiAlertCircle,
+  FiCommand,
+  FiCode,
+  FiLogIn,
+  FiPlay,
+  FiCornerUpLeft,
+  FiCornerRightDown,
+  FiTerminal,
+  FiRepeat,
+  FiUnlock,
+  FiUpload,
+  FiChevronRight,
+  FiDivideSquare,
+  FiPercent,
+  FiPlusCircle,
+  FiMinusCircle,
+  FiXCircle,
+  FiDivideCircle,
+  FiGitBranch,
 } from "react-icons/fi";
 import "../styles/UserManual.css"; // Ensure you have the correct path to your CSS file
 
@@ -17,51 +30,125 @@ const keywords = [
   {
     keyword: "sun le chore",
     explanation:
-      "Start of the DesiCode program, similar to 'function main()' (optional)",
-    icon: <FiHelpCircle size={24} color="#F6A83B " />,
+      "Start of the DesiCode program, similar to 'function main()' (optional).",
+    icon: <FiHelpCircle size={24} color="#F6A83B" />,
   },
   {
     keyword: "ho liya kaam",
     explanation:
-      "End of the DesiCode program, similar to 'function main()' (optional).",
-    icon: <FiAlertCircle size={24} color="#3BF682 " />,
+      "End of the DesiCode program, similar to closing main() (optional).",
+    icon: <FiAlertCircle size={24} color="#3BF682" />,
   },
   {
     keyword: "# comment",
     explanation:
-      "Lines starting with '# or //' are comments and removed from output.",
-    icon: <FiCommand size={24} color="#111827 " />,
+      "Lines starting with # are comments. Used to gossip with your future self.",
+    icon: <FiCommand size={24} color="#111827" />,
   },
   {
     keyword: "le le",
-    explanation: "Used to declare variables, le le x = 5;",
-    icon: <FiCode size={24} color="#F63B82 " />,
+    explanation: "Declares a variable (like 'var'), e.g. le le x = 5;",
+    icon: <FiCode size={24} color="#F63B82" />,
+  },
+  {
+    keyword: "utha le",
+    explanation: "Declares a block-scoped variable (like 'let').",
+    icon: <FiUpload size={24} color="#0EA5E9" />,
+  },
+  {
+    keyword: "mat badal",
+    explanation: "Declares a constant value (like 'const').",
+    icon: <FiUnlock size={24} color="#8B5CF6" />,
   },
   {
     keyword: "bol bera()",
-    explanation: "Print statement, used for logging output.",
+    explanation: "Logs output (console.log), for expressing your feelings.",
     icon: <FiLogIn size={24} color="#6366F1" />,
   },
   {
-    keyword: "yo ho to(condition)",
-    explanation: "Represents an 'if' condition in the code.",
+    keyword: "yo ho to (condition)",
+    explanation: "Represents an if-statement. Trust issues? Use this.",
     icon: <FiPlay size={24} color="#F87171" />,
   },
   {
     keyword: "na ho to",
-    explanation: "Represents an 'else' condition.",
+    explanation: "Represents the else condition, because not everything goes right.",
     icon: <FiCornerUpLeft size={24} color="#FBBF24" />,
   },
   {
-    keyword: "jab tak yo ho(condition)",
-    explanation: "Used to create 'while' loops.",
-    icon: <FiCode size={24} color="#FDBA74" />,
+    keyword: "warna agar (condition)",
+    explanation: "Represents else-if — because tau needs options.",
+    icon: <FiCornerRightDown size={24} color="#34D399" />,
+  },
+  {
+    keyword: "jab tak yo ho (condition)",
+    explanation: "Represents a while loop — tau keeps checking till satisfied.",
+    icon: <FiRepeat size={24} color="#FDBA74" />,
+  },
+  {
+    keyword: "baar baar (init; cond; inc)",
+    explanation: "Represents a for loop. Repetition is tradition.",
+    icon: <FiGitBranch size={24} color="#4ADE80" />,
+  },
+  {
+    keyword: "kaam",
+    explanation: "Defines a function — aka 'Tau’s secret recipe'.",
+    icon: <FiTerminal size={24} color="#FB923C" />,
+  },
+  {
+    keyword: "wapis bhej",
+    explanation: "Used to return a value from a function.",
+    icon: <FiChevronRight size={24} color="#3B82F6" />,
   },
   {
     keyword: "pooch le()",
-    explanation:
-      "Used for taking input from users,for example:  le le x = pooch le();",
+    explanation: "Used to take input from the user (like prompt()).",
     icon: <FiHelpCircle size={24} color="#3BF6F0" />,
+  },
+  {
+    keyword: "bhai ho",
+    explanation: "Equality check (==) — just casually asking.",
+    icon: <FiDivideSquare size={24} color="#FACC15" />,
+  },
+  {
+    keyword: "bhai bilkul ho",
+    explanation: "Strict equality check (===) — when tau wants no confusion.",
+    icon: <FiPercent size={24} color="#E879F9" />,
+  },
+  {
+    keyword: "berabar na ho",
+    explanation: "Represents '!=' — because tau doesn’t like everything.",
+    icon: <FiDivideSquare size={24} color="#F43F5E" />,
+  },
+  {
+    keyword: "jod",
+    explanation: "Addition operator (+) — tau loves to add masala.",
+    icon: <FiPlusCircle size={24} color="#10B981" />,
+  },
+  {
+    keyword: "gata",
+    explanation: "Subtraction operator (-) — like removing salt from chai.",
+    icon: <FiMinusCircle size={24} color="#EF4444" />,
+  },
+  {
+    keyword: "guna",
+    explanation: "Multiplication operator (*) — like multiplying jugaad.",
+    icon: <FiXCircle size={24} color="#FBBF24" />,
+  },
+  {
+    keyword: "bhaag",
+    explanation: "Division operator (/) — sometimes tau splits the bill.",
+    icon: <FiDivideCircle size={24} color="#60A5FA" />,
+  },
+  {
+    keyword: "ya to",
+    explanation: "Logical OR (||) — Tau loves multiple options.",
+    icon: <FiCommand size={24} color="#F97316" />,
+  },
+  {
+    keyword: "ara",
+    explanation: "Logical AND (&&) — Conditions tau fully trusts.",
+    icon: <FiCommand size={24} color="#10B981" />,
   },
 ];
 
