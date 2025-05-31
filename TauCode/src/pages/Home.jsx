@@ -145,7 +145,7 @@ const Home = () => {
     <Instagram size={25} />
     Instagram
   </a>
-  <a href="https://www.linkedin.com/in/dhruv-suthar-42174228b//" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition transform hover:scale-110 flex items-center gap-2">
+  <a href="https://www.linkedin.com/in/dhruv-suthar-42174228b/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition transform hover:scale-110 flex items-center gap-2">
     <Linkedin size={25} />
     LinkedIn
   </a>
